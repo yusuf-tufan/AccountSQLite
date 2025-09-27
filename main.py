@@ -100,6 +100,8 @@ def signUp():
     enter_name.configure()
     enter_name.grid(row=0, column=1)
 
+    enter_name.focus_set()
+
     lbl_surname = Label(window,text='Surname:',bg='light blue')
     lbl_surname.grid(row=2, column=0, padx=(50, 0))
 
@@ -180,10 +182,11 @@ username=Entry(width=15)
 username.config(font=('Arial',9,'bold'))
 username.grid(row=0,column=1)
 
+username.focus_set()
+
 lbl_password=Label(text='Password:')
 lbl_password.config(bg='light blue')
 lbl_password.grid(row=2,column=0,padx=(50,0))
-
 
 passw_var=StringVar()
 password=Entry(width=15,textvariable=passw_var,show='*',font=('Arial',9,'bold'))
@@ -207,9 +210,6 @@ lbl_result=Label(text='')
 
 delete_btn=Button(text='DELETE ACCOUNT',bg='red',command=delete_account)
 delete_btn.grid(row=8,column=1,pady=(60,0))
-
-
-
 
 
 window1.mainloop()
